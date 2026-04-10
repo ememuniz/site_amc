@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;                          /* Flex alinha os itens horizontalmente */
+  justify-content: space-between;         /* espaço entre itens ocupa toda largura */
+  align-items: center;                    /* alinha os itens verticalmente */
+  padding: 20px 40px;                     /* espaçamento interno entre os itens do header */
+  background-color: transparent;          /* fundo transparente para o header */
+  width: 100%;                            /* ocupa toda a largura da tela */
+}                                         /* estilo para a barra inteira do header */
+
+/*!======================ÁREA DE LOGO=======================*/
+.logo-area {
+  display: flex;                          /* Flex para alinha o logo e o texto */
+  align-items: center;                    /* alinha os itens verticalmente */
+  gap: 12px;                              /* espaço entre o logo e o texto */
+}                                         /* local para o logotipo */
+
+.logo-placeholder {
+  width: 40px;                            /* largura fixa para o logo */
+  height: 40px;                           /* altura fixa para o logo */
+  background: transparent;                    /* fundo branco para o logo */
+  color: #201b35;                        /* cor preta para o texto do logo */
+  border-radius: 4px;                    /* bordas arredondadas para o logo */
+  display: flex;                          /* Flex para centralizar o texto dentro do logo */
+  align-items: center;                    /* alinha o texto verticalmente */
+  justify-content: center;                /* alinha o texto horizontalmente */
+  font-size: 10px;                        /* tamanho da fonte para o texto */
+  font-weight: bold;                      /* texto em negrito */
+}                                         /* apenas a logo sem texto */
+
+.logo-placeholder-img {
+  width: 100%;                            /* largura fixa para o logo */
+  height: 100%;                           /* altura fixa para o logo */
+}                                         /* apenas a imagem do logotipo */
+
+.logo-text {
+  display: flex;
+  flex-direction: column;                 /* organiza o texto em coluna ao invés de linha */
+  font-size: 14px;                        /* tamanho da fonte para o texto do logo */
+  line-height: 1.2;                       /* espaçamento entre as linhas do texto */
+  color: white;                         /* cor branca para o texto do logo */
+}                                         /* local para o texto do logotipo */
+
+.logo-text strong {
+  letter-spacing: 1px;                    /* espaçamento entre as letras do texto */
+}
+
+.logo-text span {
+  font-size: 12px;                        /* tamanho da fonte para o subtítulo do logo */
+  color: #cbd5e1;                        /* cor cinza clara para o subtítulo do logo */
+}
+
+/*======================LINKS DE NAVEGAÇÃO=======================*/
+.nav-links {
+  display: flex;
+  gap: 24px;                              /* espaço entre os links de navegação */
+}                                         /* local para os links de navegação */
+
+.nav-links a {
+  color: white;
+  text-decoration: none;                 /* remove o sublinhado dos links */
+  font-size: 14px;                        /* tamanho da fonte para os links de navegação */
+  font-weight: 500;                      /* peso da fonte para os links de navegação */
+  transition: color 0.2s;                /* transição suave para a mudança de cor ao passar o mouse */
+  transition: background-color 0.2s;        /* transição suave para a mudança de fundo ao passar o mouse */
+  background-color: transparent; /* fundo escuro para os links de navegação */
+  padding: 10px 16px;                     /* espaçamento interno para os links de navegação */
+  border-radius: 20px;
+  
+}
+
+.nav-links a:hover {
+  /*color: #eab308;                        /* cor amarela para os links ao passar o mouse */
+  background-color: #a7a4a42a; /* fundo escuro para os links de navegação */
+  padding: 10px 16px;                     /* espaçamento interno para os links de navegação */
+  border-radius: 20px;
+}                                         /* estilo para os links de navegação quando o mouse passa por cima */
+
+.nav-links a:active {
+  color: #cbd5e1;                        /* cor amarela para o link ativo */
+  background-color: #c49507; /* fundo escuro para os links de navegação */
+  padding: 10px 16px;                     /* espaçamento interno para os links de navegação */
+  border-radius: 20px;
+}
+
+
+.btn-portal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;                              /* espaço entre o ícone e o texto do botão */
+  background: #c49507;              /* fundo transparente para o botão */
+  color: #cbd5e1;                      /* cor amarela para o texto do botão */
+  border: 1px solid #eab308;          /* borda amarela para o botão */
+  border-radius: 20px;                /* bordas arredondadas para o botão */
+  padding: 10px 16px;                     /* espaçamento interno para o botão */
+  font-size: 14px;                        /* tamanho da fonte para o texto do botão */
+  font-weight: 600;                      /* peso da fonte para o texto do botão */
+  cursor: pointer;                     /* cursor de ponteiro para indicar que é clicável */
+  transition: all 0.2s;                /* transição suave para todas as propriedades ao passar o mouse */
+}
+
+.btn-portal-header:hover {
+  /* para aumentar o tamanho do botão ao passar o mouse podemos usar a propriedade transform */
+  transform: scale(1.05);              /* aumenta o tamanho do botão em 5
+  /* para subir um pouco o botão ao passar o mouse podemos usar a propriedade transform */
+  transform: translateY(-1px);        /* sobe o botão em 2 pixels */
+}                                         /* estilo para o botão quando o mouse passa por cima */
