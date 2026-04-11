@@ -2,4 +2,11 @@
 
 /* Reset básico e tipografia */
 
+.page-container {
+  min-height: 100vh;
+  background-color: #201b35;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
 
