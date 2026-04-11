@@ -103,8 +103,68 @@
 }
 
 .btn-portal-header:hover {
-  /* para aumentar o tamanho do botão ao passar o mouse podemos usar a propriedade transform */
-  transform: scale(1.05);              /* aumenta o tamanho do botão em 5
-  /* para subir um pouco o botão ao passar o mouse podemos usar a propriedade transform */
-  transform: translateY(-1px);        /* sobe o botão em 2 pixels */
-}                                         /* estilo para o botão quando o mouse passa por cima */
+  transform: scale(1.05);             
+  transform: translateY(-1px);        
+}   
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+@media (max-width: 1230px) {
+  .hamburger-btn{
+    display: block;
+  }
+
+  .nav-container{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #201b35;
+    flex-direction: column;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-container.open{
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .btn-portal-header {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text span{
+    display: none;
+  }
+}
