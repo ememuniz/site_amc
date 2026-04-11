@@ -1,9 +1,24 @@
 import './Header.css';
 import logoAMC from '../assets/logo_amc2.png';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+  //Opacidade, ela começa em 1 [totalmente sólido, sem transparência]
+  const [bgAlpha, setBgAlpha] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY; // Obtenha a posição vertical do scroll
+      //Quando o scroll for zero, a opacidade é 1, à medida que o usuário rola para baixo, a opacidade diminui
+      const opacity = Math.min(1, scrollY / 300); 
+      // Se fosse o contrário deve ser: const opacity = Math.min(1, scrollY / 300); Assim varia de 1 para 0
+      setBgAlpha(opacity); 
+    }
+    window.addEventListener('scroll', handleScroll); // Adicione o event listener ao scroll
+    return () => window.removeEventListener('scroll', handleScroll); // Limpe o event listener quando o componente for desmontado
+  }, []);
+
   return (
-    <header className="navbar">
+    <header className="navbar" style={{backgroundColor: `rgba(32, 27, 53, ${bgAlpha})`}}>
       <div className="logo-area">
         <div className="logo-placeholder">
           <img className='logo-placeholder-img' src={logoAMC} alt="Logotipo da AMC" />

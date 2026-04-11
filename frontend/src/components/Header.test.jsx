@@ -19,4 +19,10 @@ describe ('Componente Header', () => {
     const button = screen.getByRole('button', { name: /Portal de Membros/i});
     expect(button).toBeInTheDocument();
   })
+
+  it('Deve iniciar com fundo transparente', () => {
+    render(<Header />);
+    const header = screen.getByRole('banner');
+    expect(header).toHaveStyle('background-color: rgba(32,27,53,0)');
+  })
 })

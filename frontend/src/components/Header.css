@@ -1,10 +1,14 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;                          /* Garante que esteja sempre no topo */
   display: flex;                          /* Flex alinha os itens horizontalmente */
   justify-content: space-between;         /* espaço entre itens ocupa toda largura */
   align-items: center;                    /* alinha os itens verticalmente */
   padding: 20px 40px;                     /* espaçamento interno entre os itens do header */
-  background-color: transparent;          /* fundo transparente para o header */
-  width: 100%;                            /* ocupa toda a largura da tela */
+  transition: background-color 0.1s ease-out; /* transição suave para a mudança de cor ao passar o mouse */
 }                                         /* estilo para a barra inteira do header */
 
 /*!======================ÁREA DE LOGO=======================*/
