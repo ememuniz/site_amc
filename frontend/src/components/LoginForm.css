@@ -1,0 +1,121 @@
+.login-card-white {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.page-titles {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.amc-logo-center {
+  margin-bottom: 20px;
+}
+
+.page-titles h1 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: normal;
+  color: #1a162b;
+}
+
+.page-titles p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.input-group {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.input-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+.forgot-password {
+  color: #eab308;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #334155;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper input:focus {
+  border-color: #201b35;
+}
+
+.btn-enter {
+  width: 100%;
+  background-color: #1a162b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-enter:hover {
+  background-color: #2a2444;
+}
+
+.register-area {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.register-link {
+  color: #eab308;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.register-link:hover {
+  color: #c49507;
+}
