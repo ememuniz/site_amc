@@ -1,5 +1,6 @@
 import logoAMC from '../assets/logo_amc2.png';
 import './LoginForm.css';
+import { Link } from 'react-router-dom';
 
 export default function LoginForm() {
   return (
@@ -37,9 +38,9 @@ export default function LoginForm() {
 
       <div className='register-area'>
         Ainda não tem acesso? {' '}
-        <a href="#" className='register-link'>
+        <Link to="/cadastro" className='register-link' style={{ color:'#eab308', fontWeight: 'bold', textDecoration: 'none'}}>
           Cadastre-se
-        </a>
+        </Link>
       </div>
     </div>
   )

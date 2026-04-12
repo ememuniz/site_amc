@@ -90,22 +90,37 @@
 .btn-portal-header {
   display: flex;
   align-items: center;
-  gap: 8px;                              /* espaço entre o ícone e o texto do botão */
-  background: #c49507;              /* fundo transparente para o botão */
-  color: #cbd5e1;                      /* cor amarela para o texto do botão */
-  border: 1px solid #eab308;          /* borda amarela para o botão */
-  border-radius: 20px;                /* bordas arredondadas para o botão */
-  padding: 10px 16px;                     /* espaçamento interno para o botão */
-  font-size: 14px;                        /* tamanho da fonte para o texto do botão */
-  font-weight: 600;                      /* peso da fonte para o texto do botão */
-  cursor: pointer;                     /* cursor de ponteiro para indicar que é clicável */
-  transition: all 0.2s;                /* transição suave para todas as propriedades ao passar o mouse */
+  gap: 8px;          
+  border-radius: 20px;                
+  padding: 10px 16px;                     
+  font-size: 14px;                        
+  font-weight: 600;                     
+  cursor: pointer;                
+  transition: all 0.2s;                
 }
 
 .btn-portal-header:hover {
   transform: scale(1.05);             
   transform: translateY(-1px);        
-}   
+} 
+
+.btn-portal-header.amarelo{
+  background-color: #c49507;
+  color: #1a162b;
+  border: 1px solid #eab308;
+}
+
+.btn-portal-header.transparente {
+  background: transparent;
+  color: rgba(251, 238, 5, 1);
+  border: 2px solid rgba(251, 238, 5, 1);
+}
+
+.btn-portal-header.transparente:hover {
+  background-color: rgba(251, 238, 5, 1);
+  color: #1a162b;
+  border: 2px solid rgba(251, 238, 5, 1);
+}
 
 .hamburger-btn {
   display: none;
