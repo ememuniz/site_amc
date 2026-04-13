@@ -1,8 +1,17 @@
 import logoAMC from '../assets/logo_amc2.png';
 import './LoginForm.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function LoginForm() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Tentativa de Login:', { email, password})
+  }
+
   return (
     <div className='login-card-white'>
       <div className='page-titles'>
@@ -11,12 +20,19 @@ export default function LoginForm() {
         <p>Acesse o portal da Academia</p>
       </div>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='input-group'>
-          <label htmlFor="email">E-mail</label>
+          <label htmlFor="email">E-MAIL</label>
           <div className='input-wrapper'>
             <span className='input-icon'>✉️</span>
-            <input type="email" id='email' placeholder='Digite seu e-mail' required />
+            <input 
+              type="email" 
+              id='email' 
+              placeholder='Digite seu e-mail' 
+              required 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
         </div>
 
@@ -27,7 +43,14 @@ export default function LoginForm() {
           </div>
           <div className='input-wrapper'>
             <span className='input-icon'>🔒</span>
-            <input type="password" id='password' placeholder='Digite sua senha' required/>
+            <input 
+              type="password" 
+              id='password' 
+              placeholder='Digite sua senha' 
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
         </div>
 

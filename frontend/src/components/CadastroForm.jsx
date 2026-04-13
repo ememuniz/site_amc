@@ -1,8 +1,26 @@
+import { useState } from 'react';
 import logoAMC from '../assets/logo_amc2.png';
-import './CadastroForm.css';
 import { Link } from 'react-router-dom';
+import './CadastroForm.css';
 
 export default function CadastroForm() {
+  const [nome, setNome] = useState('');
+  const [codigo, setCodigo] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (password !== confirmPassword) {
+      alert('As senhas não coincidem. Tente novamente!')
+      return;
+    }
+
+    console.log('Tentativa de cadastro:', { nome, codigo, email, password });
+  }
+
   return (
     <div className='login-card-white'>
       <div className='page-titles'>
@@ -11,12 +29,19 @@ export default function CadastroForm() {
         <p>Junte-se à Academia Maranhense de Ciências</p>
       </div>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='input-group'>
           <label htmlFor="nome">NOME COMPLETO</label>
           <div className='input-wrapper'>
             <span className='input-icon'>👤</span>
-            <input type="text" id='nome' placeholder='Digite seu nome completo' required />
+            <input 
+              type="text" 
+              id='nome' 
+              placeholder='Digite seu nome completo' 
+              required
+              value={nome}
+              onChange={(e) => setNome(e.target.value)} 
+            />
           </div>
         </div>
 
@@ -24,7 +49,14 @@ export default function CadastroForm() {
           <label htmlFor="codigo">CÓDIGO DE AUTORIZAÇÃO</label>
           <div className='input-wrapper'>
             <span className='input-icon'>🔑</span>
-            <input type="text" id='codigo' placeholder='Digite o código recebido' required />
+            <input 
+              type="text" 
+              id='codigo' 
+              placeholder='Digite o código recebido' 
+              required
+              value={codigo}
+              onChange={(e) => setCodigo(e.target.value)}
+            />
           </div>
         </div>
 
@@ -32,7 +64,14 @@ export default function CadastroForm() {
           <label htmlFor="email">E-MAIL</label>
           <div className='input-wrapper'>
             <span className='input-icon'>✉️</span>
-            <input type="email" id='email' placeholder='Digite seu e-mail' required />
+            <input 
+              type="email" 
+              id='email' 
+              placeholder='Digite seu e-mail' 
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
         </div>
 
@@ -40,7 +79,14 @@ export default function CadastroForm() {
           <label htmlFor="password">SENHA</label>
           <div className='input-wrapper'>
             <span className='input-icon'>🔒</span>
-            <input type="password" id='password' placeholder='Crie uma senha forte' required />
+            <input 
+              type="password" 
+              id='password' 
+              placeholder='Crie uma senha forte' 
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
         </div>
 
@@ -48,7 +94,14 @@ export default function CadastroForm() {
           <label htmlFor="confirm-password">CONFIRMAR SENHA</label>
           <div className='input-wrapper'>
             <span className='input-icon'>🔐</span>
-            <input type="password" id='confirm-password' placeholder='Repita sua senha' required />
+            <input 
+              type="password" 
+              id='confirm-password' 
+              placeholder='Repita sua senha' 
+              required
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)} 
+            />
           </div>
         </div>
 
