@@ -1,17 +1,47 @@
 import logoAMC from '../assets/logo_amc2.png';
 import './LoginForm.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
+//PASSO3: FAZER A PAGINA DE LOGIN
 export default function LoginForm() {
+  //region DECLARACAO DE VARIAVEIS
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  //endregion
 
-  const handleSubmit = (e) => {
+  //region FUNÇÃO HANDLESUBMIT
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log('Tentativa de Login:', { email, password})
+    try {
+      const response = await fetch('http://localhost:3000/api/auth/login', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('role', data.user.role);
+        console.log(data);
+        if (data.user.role === 'ADMIN') {
+          navigate('/dashboard/admin');
+        } else if (data.user.role === 'MEMBER') {
+          navigate('/dashboard/member');
+        } else {
+          alert('Você não tem permissão para acessar esse portal');
+        }
+      } else {
+        alert(data.error, 'erro ao fazer login');
+      }
+    } catch (error) {
+      alert('erro ao conectar no servidor', error);
+    }
   }
+  //endregion
 
+  //region RETURN
   return (
     <div className='login-card-white'>
       <div className='page-titles'>
@@ -68,3 +98,4 @@ export default function LoginForm() {
     </div>
   )
 }
+//endregion

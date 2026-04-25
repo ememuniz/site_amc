@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 
 export const register = async (req, res) => {
   try {
-    const { email, password, inviteCode } = req.body;
+    const { name, email, password, inviteCode } = req.body;
 
     //Validações iniciais
     if (!inviteCode) {
@@ -47,7 +47,7 @@ export const register = async (req, res) => {
         data: {
           email,
           password: hashedPassword,
-          role: 'MEMBER'  //Todo novo cadastro por convite vira membro
+          role: 'MEMBER'  
         }
       })
 

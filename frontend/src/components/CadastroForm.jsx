@@ -1,16 +1,21 @@
 import { useState } from 'react';
 import logoAMC from '../assets/logo_amc2.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './CadastroForm.css';
 
+//PASSO2: FAZER A PAGINA PARA COLETA DE DADOS
+//region DECLARACAO DE VARIAVEIS
 export default function CadastroForm() {
   const [nome, setNome] = useState('');
   const [codigo, setCodigo] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
+//endregion
 
-  const handleSubmit = (e) => {
+//region FUNÇÃO HANDLESUBMIT PARA COLETA DE DADOS
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -18,8 +23,28 @@ export default function CadastroForm() {
       return;
     }
 
-    console.log('Tentativa de cadastro:', { nome, codigo, email, password });
+    try {
+      const response = await fetch('http://localhost:3000/api/auth/register', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ name:nome, inviteCode:codigo, email:email, password:password })
+      })
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.error);
+        e.target.reset();
+        return;
+      } else {
+        e.target.reset();
+      }
+      navigate('/login');
+    } catch (error) {
+      alert('erro ao conectar no servidor', error);
+    }
   }
+//endregion 
 
   return (
     <div className='login-card-white'>
