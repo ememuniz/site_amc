@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import logoAMC from '../assets/logo_amc2.png';
 import './Header.css';
 
-export default function Header({ botaoAmarelo = true }) {
+export default function Header({ botaoAmarelo = true,  backgroundScroll = true }) {
   //region DECLARAÇÃO DE VARIÁVEIS
   const [bgAlpha, setBgAlpha] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +23,12 @@ export default function Header({ botaoAmarelo = true }) {
   }
 
   useEffect(() => {
+    // SE NÃO TIVER SCROLL: Define a opacidade como 1 (fixa) e não faz mais nada
+    if (!backgroundScroll) {
+      return; // O "return" para a execução aqui, então ele nem cria o listener de scroll
+    }
+
+    // SE TIVER SCROLL: Cria e ativa o monitoramento da tela
     const handleScroll = () => {
       const scrollY = window.scrollY; 
       const opacity = Math.min(1, scrollY / 300); 
@@ -30,13 +36,20 @@ export default function Header({ botaoAmarelo = true }) {
     }
 
     window.addEventListener('scroll', handleScroll); 
+    
+    // Função de limpeza (remove o listener quando o componente sair da tela ou mudar)
     return () => window.removeEventListener('scroll', handleScroll); 
-  }, []);
+    
+  }, [backgroundScroll]); // <-- O Hook fica "vigiando" essa variável
 
   return (
     <header 
     className="navbar" 
-    style={{backgroundColor: isMenuOpen ? 'rgba(32, 27, 53, 1)': `rgba(32, 27, 53, ${bgAlpha})`}}
+    style={{
+        backgroundColor: isMenuOpen 
+          ? 'rgb(26, 26, 64)' 
+          : `rgba(26, 26, 64, ${backgroundScroll ? bgAlpha : 1})` // Se for falso, crava a opacidade no 1
+    }}
     >
 
       {/* LOGO */}

@@ -5,7 +5,9 @@
   width: 100%;
   max-width: 420px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  
 }
 
 .page-titles {
@@ -53,7 +55,7 @@
   color: #eab308;
   text-decoration: none;
   font-size: 11px;
-  font-weight: 700;;
+  font-weight: 700;
 }
 
 .input-wrapper {

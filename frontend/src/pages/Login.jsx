@@ -6,7 +6,10 @@ import './Login.css';
 export default function Login() {
   return (
     <div claasName='page-container'>
-      <Header botaoAmarelo={false}/>
+      <Header 
+        botaoAmarelo={false}
+        backgroundScroll={false}
+      />
       <main className='main-content'>
         <LoginForm />
       </main>

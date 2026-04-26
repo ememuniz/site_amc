@@ -80,9 +80,9 @@
 }                                         /* estilo para os links de navegação quando o mouse passa por cima */
 
 .nav-links a:active {
-  color: #cbd5e1;                        /* cor amarela para o link ativo */
-  background-color: #c49507; /* fundo escuro para os links de navegação */
-  padding: 10px 16px;                     /* espaçamento interno para os links de navegação */
+  color: #000000;                             /* cor amarela para o link ativo */
+  background-color: rgba(252, 196, 25, 1);    /* fundo escuro para os links de navegação */
+  padding: 10px 16px;                           /* espaçamento interno para os links de navegação */
   border-radius: 20px;
 }
 
@@ -105,21 +105,21 @@
 } 
 
 .btn-portal-header.amarelo{
-  background-color: rgba(251, 238, 5, 1);
+  background-color: rgba(252, 196, 25, 1);
   color: #1a162b;
-  border: 1px solid rgba(251, 238, 5, 1);
+  border: 1px solid rgba(252, 196, 25, 1);
 }
 
 .btn-portal-header.transparente {
   background: transparent;
-  color: rgba(251, 238, 5, 1);
-  border: 2px solid rgba(251, 238, 5, 1);
+  color: rgba(252, 196, 25, 1);
+  border: 2px solid rgba(252, 196, 25, 1);
 }
 
 .btn-portal-header.transparente:hover {
-  background-color: rgba(251, 238, 5, 1);
+  background-color: rgba(252, 196, 25, 1);
   color: #1a162b;
-  border: 2px solid rgba(251, 238, 5, 1);
+  border: 2px solid rgba(252, 196, 25, 1);
 }
 
 .hamburger-btn {
@@ -166,7 +166,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #201b35;
+    background-color: rgba(26, 26, 64, 1);
     flex-direction: column;
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);

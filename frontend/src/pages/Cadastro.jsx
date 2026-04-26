@@ -6,7 +6,10 @@ import './Cadastro.css';
 export default function Cadastro() {
   return (
     <div className="page-container">
-      <Header botaoAmarelo={false} />
+      <Header 
+        botaoAmarelo={false}
+        backgroundScroll={false}   
+      />
       <main className="main-content">
         <CadastroForm />
       </main>

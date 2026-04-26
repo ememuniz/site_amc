@@ -1,5 +1,5 @@
 .footer {
-  background-color: #141122;
+  background-color: rgba(26, 26, 64, 1);
   padding: 60px 40px;
   margin-top: auto;
 }
@@ -44,12 +44,12 @@
 }
 
 .icon-circle:hover {
-  color: white;
-  border-color: white;
+  color: rgba(252, 196, 25, 1);
+  border-color: rgba(252, 196, 25, 1);
 }
 
 .footer-title {
-  color: #eab308;
+  color: rgba(252, 196, 25, 1);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -68,11 +68,11 @@
 }
 
 .footer-col a:hover {
-  color: white;
+  color: rgba(252, 196, 25, 1);
 }
 
 .email-link {
-  color: #eab308 !important; 
+  color: rgba(252, 196, 25, 1) !important; 
   font-weight: 600;
 }
 
