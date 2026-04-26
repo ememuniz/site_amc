@@ -45,6 +45,7 @@ export const register = async (req, res) => {
     const newUser = await prisma.$transaction(async (tx) => {
       const user = await tx.user.create({
         data: {
+          name,
           email,
           password: hashedPassword,
           role: 'MEMBER'  
@@ -60,6 +61,7 @@ export const register = async (req, res) => {
     })
 
     return res.status(201).json({ 
+      name: newUser.name,
       id: newUser.id,
       email: newUser.email,
       role: newUser.role
@@ -98,6 +100,7 @@ export const login = async (req, res) => {
       token,
       user: {
         id: user.id,
+        name: user.name,
         email: user.email,
         role: user.role
       }

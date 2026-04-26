@@ -105,9 +105,9 @@
 } 
 
 .btn-portal-header.amarelo{
-  background-color: #c49507;
+  background-color: rgba(251, 238, 5, 1);
   color: #1a162b;
-  border: 1px solid #eab308;
+  border: 1px solid rgba(251, 238, 5, 1);
 }
 
 .btn-portal-header.transparente {
@@ -137,7 +137,25 @@
   gap: 64px;
 }
 
-@media (max-width: 1230px) {
+.user-logged-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-logout {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 1310px) {
   .hamburger-btn{
     display: block;
   }
@@ -176,6 +194,8 @@
     width: 100%;
     justify-content: center;
   }
+
+  
 }
 
 @media (max-width: 480px) {
