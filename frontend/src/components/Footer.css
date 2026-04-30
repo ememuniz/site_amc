@@ -78,6 +78,9 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .footer {
+    min-width: 100%;
+  }
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;

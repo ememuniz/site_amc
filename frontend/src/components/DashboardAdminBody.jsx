@@ -1,5 +1,6 @@
 import './DashboardAdminBody.css';
 import { useState } from 'react';
+import VisaoGeral from './VisaoGeral';
 
 
 
@@ -94,7 +95,7 @@ export default function DashboardAdminBody() {
         
       </aside>
       <main className="dashboard-main">
-        
+        {visaoGeral && <VisaoGeral />}      
       </main>
     </div>
   );
