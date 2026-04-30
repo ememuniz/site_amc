@@ -1,0 +1,36 @@
+/*CONTAINER - MARK: VISAO GERAL - HEADER */
+.visao-geral-header{
+  display: flex;
+  flex: 1;
+  background-color: rgb(249, 249, 249);
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 0px 15px 0px;
+}
+.visao-geral-header time{
+  font-weight: 400;
+  color: rgb(111, 110, 110);
+  font-size: 12px;
+  background-color: white;
+  padding: 7px 10px;
+  border-radius: 7px;
+  box-shadow: -0.5px 1px 8px rgba(0, 0, 0, 0.2);
+}
+.visao-geral-header-title{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.visao-geral-header-title h1{
+  font-family: Georgia, serif;
+  font-weight: 200;
+  color:black;
+  font-size: 32px;
+}
+.visao-geral-header-title p{
+  font-weight: 400;
+  color: rgb(111, 110, 110);
+  font-size: 16px;
+}
