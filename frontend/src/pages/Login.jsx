@@ -1,5 +1,5 @@
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
+import Header from '../components/layouts/Header.jsx';
+import Footer from '../components/layouts/Footer.jsx';
 import LoginForm from '../components/LoginForm.jsx';
 import './Login.css';
 

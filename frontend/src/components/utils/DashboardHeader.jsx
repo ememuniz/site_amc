@@ -1,9 +1,6 @@
 import React from 'react'
 import './DashboardHeader.css'
 
-
-
-
 export default function DashboardHeader() {
   const hoje = new Date();
 

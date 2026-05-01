@@ -1,4 +1,4 @@
-import logoAMC from '../assets/logo_amc2.png';
+import logoAMC from '../../assets/logo_amc2.png';
 import './Footer.css';
 
 export default function Footer() {

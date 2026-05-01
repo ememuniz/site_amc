@@ -1,7 +1,7 @@
 import './DashboardMemberBody.css';
 import { useState } from 'react';
-import VisaoGeral from './VisaoGeral';
-import GestaoConteudo from './GestaoConteudo';
+import VisaoGeral from './elements/VisaoGeral';
+import GestaoConteudo from './elements/GestaoConteudo';
 
 
 

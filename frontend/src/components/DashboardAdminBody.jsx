@@ -1,6 +1,6 @@
 import './DashboardAdminBody.css';
 import { useState } from 'react';
-import VisaoGeral from './VisaoGeral';
+import VisaoGeral from './elements/VisaoGeral';
 
 
 

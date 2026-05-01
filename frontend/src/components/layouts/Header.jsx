@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logoAMC from '../assets/logo_amc2.png';
+import logoAMC from '../../assets/logo_amc2.png';
 import './Header.css';
 
 export default function Header({ botaoAmarelo = true,  backgroundScroll = true }) {
