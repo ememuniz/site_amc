@@ -5,7 +5,7 @@ import './DashboardMember.css';
 
 export default function DashboardMember() {
   return (
-    <div className="page-container">
+    <div className="page-member-container">
       <Header 
         botaoAmarelo={true}
         backgroundScroll={false} 

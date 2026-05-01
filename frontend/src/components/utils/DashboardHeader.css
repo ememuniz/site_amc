@@ -1,0 +1,18 @@
+.visao-geral-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.visao-geral-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+}
+.visao-geral-header time {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: -2px 2px 11px rgba(0, 0, 0, 0.2);
+}
