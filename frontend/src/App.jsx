@@ -8,7 +8,7 @@ import DashboardAdmin from './pages/DashboardAdmin.jsx';
 import DashboardMember from './pages/DashboardMember.jsx';
 //endregion
 
-//PASSO1: ROTAS LIVRES E PROTEGIDAS
+
 
 //region FUNÇÃO DE PROTEÇÃO
 const ProtectedRoutes = ({children, roleExigido}) => {

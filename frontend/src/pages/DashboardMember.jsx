@@ -10,9 +10,7 @@ export default function DashboardMember() {
         botaoAmarelo={true}
         backgroundScroll={false} 
       />
-      <main className='main-content'>
-        <DashboardMemberBody />
-      </main>
+      <DashboardMemberBody />
       <Footer />      
     </div>
   );

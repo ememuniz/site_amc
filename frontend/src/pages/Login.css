@@ -14,8 +14,6 @@ body {
 
 .page-container {
   min-height: 100vh;
-  background-color: #141122;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './VisaoGeral.css'
-import DashboardHeader from './DashboardHeader'
+import DashboardHeader from '../utils/DashboardHeader'
 
 
 export default function VisaoGeral() {

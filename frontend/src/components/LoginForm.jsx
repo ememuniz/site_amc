@@ -3,7 +3,7 @@ import './LoginForm.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-//PASSO3: FAZER A PAGINA DE LOGIN
+
 export default function LoginForm() {
   //region DECLARACAO DE VARIAVEIS
   const [email, setEmail] = useState('');

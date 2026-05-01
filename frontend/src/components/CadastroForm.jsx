@@ -3,7 +3,7 @@ import logoAMC from '../assets/logo_amc2.png';
 import { Link, useNavigate } from 'react-router-dom';
 import './CadastroForm.css';
 
-//PASSO2: FAZER A PAGINA PARA COLETA DE DADOS
+
 //region DECLARACAO DE VARIAVEIS
 export default function CadastroForm() {
   const [nome, setNome] = useState('');

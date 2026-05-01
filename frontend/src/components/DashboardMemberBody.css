@@ -1,110 +1,22 @@
+/*CONTAINER - MARK:DASHBOARD-CONTAINER */
 .dashboard-container {
+  margin-top: 80px;
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  min-height: 90vh;
-  margin-top: 0px;
 }
-/*CONTAINER - MARK:ASIDE */
+
+/*CONTAINER - MARK: ASIDE */
 .dashboard-aside {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  background-color: rgba(26, 26, 64, 1);
-}
-/*CONTAINER - MARK:ASIDE - TITLE */
-.dashboard-aside-title {
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
-  padding: 25px 30px;
-  width: 100%;
-  height: 100px;
-  gap: 10px;
-}
-.dashboard-aside-title-logo {
-  display:flex;
-  background-color: rgba(252, 196, 25, 1);
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 450;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  width: 45px;
-  height: 45px;
-}
-.dashboard-aside-title-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  flex: 1;
-}
-.dashboard-aside-title-content strong {
-  font-size: 1rem;
-  line-height:1.2;
-  font-weight: 550;
-  color: rgb(255, 255, 255);
-}
-.dashboard-aside-title-content span {
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-
-/*CONTAINER - MARK: ASIDE - NAV*/
-.dashboard-aside-nav {
-  width: 100%;
-  height: 190px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0px 30px;
-}
-.dashboard-aside-nav-a {
-  align-items: center;
-}
-.dashboard-aside-nav-a.amareloDesactive {
-  text-decoration: none;
-  color: rgb(170, 170, 170); 
-  font-weight: 600;
-  gap: 20px;
-  display: flex;
-  padding: 10px 16px;
-  border-radius: 10px;
-}
-.dashboard-aside-nav a.amareloDesactive:hover {
-  color: rgb(255, 255, 255);
-}
-
-.dashboard-aside-nav-a.amareloActive {
-  text-decoration: none;
-  color: rgb(0, 0, 0); 
-  font-weight: 600;
-  background-color: rgba(252, 196, 25, 1);
-  gap: 20px;
-  display: flex;
-  padding: 10px 16px;
-  border-radius: 10px;
-}
-.dashboard-aside-nav a.amareloActive:hover {
-  color: rgb(255, 255, 255);
+  min-width: 300px;
 }
 
 
 
-/*CONTAINER - MARK: MAIN */
-.dashboard-main {
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #f6f5fd;
-  margin-top: 110px;
-  padding-top: 20px;
+
+@media (max-width:1310px) {
+/*CONTAINER - MARK: RESP-DASHBOARD-CONTAINER */
+  .dashboard-container {
+    flex-direction: column-reverse;
+  }
 }
+
+
