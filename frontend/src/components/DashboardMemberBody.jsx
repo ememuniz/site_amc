@@ -12,7 +12,7 @@ export default function DashboardAdminBody() {
   const nomeCompleto = localStorage.getItem('nomeCompleto');
   const primeiroNome =nomeCompleto? nomeCompleto.split(' ')[0]: '';
   const primeiraLetra = primeiroNome.charAt(0).toUpperCase();
-  const ultimoNome =nomeCompleto? nomeCompleto.split(' ')[nomeCompleto.split(' ').length - 1]: '';
+  const ultimoNome =nomeCompleto? nomeCompleto.split(' ')[nomeCompleto.split(' ').length - 1]: '';  
 
 
   const handleVisaoGeral = (e) => {

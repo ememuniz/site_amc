@@ -28,6 +28,7 @@ export default function VisaoGeral() {
         <div className='visao-geral-recentactivity-content'></div>
         <div className='visao-geral-recentactivity-content'></div>
         <div className='visao-geral-recentactivity-content'></div>
+        <div className='visao-geral-recentactivity-content'></div>
 
       </section>
       
