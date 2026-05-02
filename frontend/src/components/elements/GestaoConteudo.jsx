@@ -3,7 +3,7 @@ import './GestaoConteudo.css';
 import DashboardHeader from '../utils/DashboardHeader';
 
 
-export default function GestaoConteudo() {
+export default function GestaoConteudo({handleCriarPost}) {
   return (
     <div className='gestao-conteudo'>
       <DashboardHeader />
@@ -14,7 +14,7 @@ export default function GestaoConteudo() {
         <hr className='linha-divisoria'/>
         <div className='gestao-conteudo-content-addvlog'>
           <h2>GESTÃO DE POSTAGENS DE VLOG</h2>
-          <a href="#"><span>+ </span>Novo Registro</a>
+          <a href="#" onClick={handleCriarPost}><span>+ </span>Novo Registro</a>
         </div>
       </section>
     </div>

@@ -2,6 +2,7 @@ import './DashboardMemberBody.css';
 import { useState } from 'react';
 import VisaoGeral from './elements/VisaoGeral';
 import GestaoConteudo from './elements/GestaoConteudo';
+import CriarPost from './elements/CriarPost';
 
 
 
@@ -9,6 +10,7 @@ export default function DashboardAdminBody() {
   const [visaoGeral, setVisaoGeral] = useState(true);
   const [gestaoConteudo, setGestaoConteudo] = useState(false);
   const [minhaConta, setMinhaConta] = useState(false);
+  const [criarPost, setCriarPost] = useState(false);
   const nomeCompleto = localStorage.getItem('nomeCompleto');
   const primeiroNome =nomeCompleto? nomeCompleto.split(' ')[0]: '';
   const primeiraLetra = primeiroNome.charAt(0).toUpperCase();
@@ -20,6 +22,7 @@ export default function DashboardAdminBody() {
     setVisaoGeral(true);
     setGestaoConteudo(false);
     setMinhaConta(false);
+    setCriarPost(false);
   }
 
   const handleGestaoConteudo = (e) => {
@@ -27,6 +30,7 @@ export default function DashboardAdminBody() {
     setVisaoGeral(false);
     setGestaoConteudo(true);
     setMinhaConta(false);
+    setCriarPost(false);
   }
 
   const handleMinhaConta = (e) => {
@@ -34,6 +38,15 @@ export default function DashboardAdminBody() {
     setVisaoGeral(false);
     setGestaoConteudo(false);
     setMinhaConta(true);
+    setCriarPost(false);
+  }
+
+  const handleCriarPost = (e) => {
+    e.preventDefault();
+    setVisaoGeral(false);
+    setGestaoConteudo(false);
+    setMinhaConta(false);
+    setCriarPost(true);
   }
 
   return (
@@ -83,7 +96,8 @@ export default function DashboardAdminBody() {
       </aside>
       <main className="dashboard-member-main">
         {visaoGeral && <VisaoGeral />} 
-        {gestaoConteudo && <GestaoConteudo />}     
+        {gestaoConteudo && <GestaoConteudo handleCriarPost={handleCriarPost} />} 
+        {criarPost && <CriarPost />}    
       </main>
     </div>
   );
